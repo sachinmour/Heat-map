@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Data Visualization</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" type="text/css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="./pesticide.min.css"> -->
+    <!-- <script type="text/javascript" src="./jQuery.js"></script> -->
+    <script type="text/javascript" src="./d3.v4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./main.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="content">
+            <div id="title">
+                <p>Monthly Global Land-Surface Temperature</p>
+            </div>
+            <svg id="chart">
+            </svg>
+            <div id="tooltip">
+                <p id="time"><span id="month"></span>-<span id="year"></span></p>
+                <p id="temp"></p>
+                <p id="variance"></p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+
+</html>
