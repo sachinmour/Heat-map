@@ -1,0 +1,93 @@
+$first: #000000;
+$second: #263248;
+$mid: #7E8AA2;
+$slast: #FFFFFF;
+$last: #FF9800;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$share-width: 990px;
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lighten($second, 20);
+}
+
+div#app {
+    width: 100%;
+    min-width: 1250px;
+    min-height: 100vh;
+    color: black;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+div#content {
+    height: 100%;
+    margin-top: 40px;
+    min-width: 1240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    div#title {
+        p {
+            font-size: 3rem;
+            font-family: 'Lato', 'sans-serif';
+            margin: 0;
+            color: $mid;
+        }
+    }
+    svg#chart {
+        width: 1200px;
+        height: 510px;
+    }
+}
+
+div#tooltip {
+    background-color: rgba(44, 62, 80, 0.6);
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    p {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        color: white;
+        font-family: 'Lato', 'sans-serif';
+        span {
+            font-weight: 900;
+        }
+    }
+}
+
+text {
+    fill: "#000";
+    font-family: 'Lato', 'sans-serif';
+}
